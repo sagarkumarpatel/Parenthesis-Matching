@@ -18,6 +18,16 @@ struct stack* createStack(int size){
     s->arr=(char*)malloc(size * sizeof(char));
     return s;
 }
+int isFull(struct stack* s){
+    if(s->top==s->size-1){
+        printf("Stack Overflow\n");
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
 int main(){
 
 

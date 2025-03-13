@@ -66,6 +66,20 @@ int isMatching(char opening,char closing){
     }
     return 0;
 }
+int isBalance(char* expresion){
+    struct stack* s=createStack(100);
+    for(int i=0;expresion[i]!='\0';i++){
+        if(expresion[i]=='('||expresion[i]=='{'||expresion[i]=='['){
+            push(s,expresion[i]);
+        }
+        else if(expresion[i]==')'||expresion[i]=='}'||expresion[i]==']'){
+            if(isEmpty(s)||!isMatching(pop(s),expresion[i])){
+                return 0;
+            }
+        }
+    }
+    return isEmpty(s);
+}
 
 int main(){
 

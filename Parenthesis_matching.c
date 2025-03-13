@@ -37,7 +37,14 @@ int isEmpty(struct stack* s){
     }
 }
 
-
+void push(struct stack* s,char ch){
+    if(isFull(s)){
+        printf("Stack overFlow!, Cann't push\n");
+        return;
+    }
+    s->top++;
+    s->arr[s->top]=ch;
+}
 
 int main(){
 

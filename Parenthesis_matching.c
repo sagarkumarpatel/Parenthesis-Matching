@@ -54,6 +54,18 @@ char pop(struct stack* s){
     return s->arr[s->top--];
 }
 
+int isMatching(char opening,char closing){
+    if(opening=='('&& closing==')'){
+        return 1;
+    }
+    if(opening=='{'&& closing=='}'){
+        return 1;
+    }
+    if(opening=='['&& closing==']'){
+        return 1;
+    }
+    return 0;
+}
 
 int main(){
 

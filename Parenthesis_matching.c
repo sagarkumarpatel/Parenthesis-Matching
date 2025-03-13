@@ -27,6 +27,17 @@ int isFull(struct stack* s){
         return 0;
     }
 }
+int isEmpty(struct stack* s){
+    if(s->top==-1){
+        printf("Stack Underflow!\n");
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+
 
 int main(){
 

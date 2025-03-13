@@ -45,6 +45,15 @@ void push(struct stack* s,char ch){
     s->top++;
     s->arr[s->top]=ch;
 }
+ 
+char pop(struct stack* s){
+    if(isEmpty(s)){
+        printf("Stack UnderFlow!, cannot pop\n");
+        return '\0';
+    }
+    return s->arr[s->top--];
+}
+
 
 int main(){
 

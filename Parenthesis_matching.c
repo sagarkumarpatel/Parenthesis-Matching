@@ -7,6 +7,7 @@ struct stack{
     char *arr;
 
 };
+ 
 struct stack* createStack(int size){
     struct stack* s=(struct stack*)malloc(sizeof(struct stack));
     if(s==NULL){
@@ -82,7 +83,15 @@ int isBalance(char* expresion){
 }
 
 int main(){
-
+  char expresion[100];
+  printf("Enter your expression: ");
+  scanf("%s",expresion);
+  if(isBalance(expresion)){
+    printf("\nThe parenthesis is balance\n");
+  }
+  else{
+    printf("The parenthesis is not balance\n");
+  }
 
     return 0;
 }
